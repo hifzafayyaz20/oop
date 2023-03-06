@@ -24,16 +24,17 @@ class Duration{
 		}
 		Duration(int seconds){
 			days=seconds/86400;
-			seconds-=seconds%86400;
+			seconds-=days*86400;
+			hours=seconds/3600;
+			seconds-=hours*60;
 			minutes=seconds/60;
 			seconds-=minutes*60;
-			hours=seconds/3600;
-			seconds-=seconds*3600;
 			seconds=seconds%60;
 			}
 			void display(){
-				cout<<days<<"days"<<"hours"<<minutes<<"minutes"<<seconds<<"seconds<<endl";
+				cout<<days<<"days"<<hours<<"hours"<<minutes<<"minutes"<<seconds<<"seconds"<<endl;
 			}
+				
 			int getinseconds(){
 				return days*86400+hours*3600+minutes*60+seconds;
 			}
@@ -42,8 +43,8 @@ class Duration{
 int main(){
 
    Duration d1;
-	Duration d2(2,4,6,8);
-	Duration d3(2479);
+	Duration d2(2,4,8,5);
+	Duration d3(3679);
 	
 	d1.display(); 
 	cout<<"duration in seconds="<<d1.getinseconds()<<endl;
