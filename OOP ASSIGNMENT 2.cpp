@@ -46,10 +46,10 @@ int main(){
 	Duration d3(2479);
 	
 	d1.display(); 
-	cout<<"duration in seconds:"<<d1.getinseconds()<<endl;
+	cout<<"duration in seconds="<<d1.getinseconds()<<endl;
     d2.display();
-	cout<<"duration in seconds:"<<d2.getinseconds()<<endl;
+	cout<<"duration in seconds="<<d2.getinseconds()<<endl;
     d3.display();
-    cout<<"duration in seconds:"<<d3.getinseconds()<<endl;
+    cout<<"duration in seconds="<<d3.getinseconds()<<endl;
     return 0;
 	}
